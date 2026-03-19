@@ -18,7 +18,7 @@ export default function HeroSection() {
       {/* Floating Card */}
       <div className="relative z-10 bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl px-10 py-12 mx-4 max-w-xl w-full text-center">
         <h1 className="text-4xl md:text-5xl font-serif font-semibold text-gray-900 leading-tight mb-4">
-          Your Furnitures and Interior Design Experts
+          Your Furniture and Interior Design Experts
         </h1>
 
         <p className="text-gray-500 text-base mb-8 tracking-wide">
