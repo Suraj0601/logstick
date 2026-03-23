@@ -1,5 +1,9 @@
 "use client";
 
+import Image from "next/image";
+
+import AboutUsImage from "@/public/Images/About-Us.png";
+
 export default function AboutUs() {
   return (
     <section className="w-full bg-white py-20 px-4">
@@ -31,9 +35,10 @@ export default function AboutUs() {
 
         {/* Right: Image */}
         <div className="flex-1 w-full">
-          <img
-            src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80"
+          <Image
+            src={AboutUsImage}
             alt="Logstick interior design showcase"
+            placeholder="blur"
             className="w-full h-[420px] object-cover rounded-lg shadow-md"
           />
         </div>

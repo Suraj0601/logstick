@@ -1,30 +1,32 @@
 "use client";
 
+import Image from "next/image";
+
+import ModuleKitchenImage from "@/public/Images/Home-Solution/Modular-KItchen/Island-Kitchen/Island-kitchen-1.webp";
+import WardrobesImage from "@/public/Images/Home-Solution/Wardrobes/Free-standing-Wardrobe/free-standing-wardrobe-1.png";
+import LivingRoomImage from "@/public/Images/Home-Solution/Living-Room-Furniture/Accent-Chairs/accent-chair-1.png";
+import BedRoomImage  from "@/public/Images/Home-Solution/Bedroom-Furniture/Beds/bed-1.png";
+
 const SOLUTIONS = [
-  {
-    title: "CUSTOM INTERIORS",
-    href: "/home-solutions/custom-interiors",
-    image: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80",
-  },
   {
     title: "MODULAR KITCHEN",
     href: "/home-solutions/modular-kitchen",
-    image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80",
+    image: ModuleKitchenImage,
   },
   {
     title: "WARDROBES",
     href: "/home-solutions/wardrobes",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
+    image: WardrobesImage,
   },
   {
     title: "LIVING ROOM FURNITURE",
     href: "/home-solutions/living-room-furniture",
-    image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80",
+    image: LivingRoomImage,
   },
   {
     title: "BEDROOM FURNITURE",
     href: "/home-solutions/bedroom-furniture",
-    image: "https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80",
+    image: BedRoomImage,
   },
 ];
 
@@ -54,7 +56,7 @@ export default function HomeSolutions() {
               className="group relative overflow-hidden aspect-[4/3] block"
             >
               {/* Background image */}
-              <img
+              <Image
                 src={item.image}
                 alt={item.title}
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"

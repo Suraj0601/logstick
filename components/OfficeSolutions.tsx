@@ -1,30 +1,38 @@
 "use client";
 
+import Image from "next/image";
+
+import WorkStationImage from "@/public/Images/Office-Solution/Workstation/Cluster-2-4-Seater-Workstations/Cluster-2-4-Seater-Workstations-1.webp"
+import OfficeChairImage from "@/public/Images/Office-Solution/OFFICE-CHAIRS/Conference-Room-Chairs/conference-room-chair-1.png"
+import SoftSeatingReceptionImage from "@/public/Images/Office-Solution/SOFT-SEATING-&-OFFICE-SOFAS/Accent-&-Lounge Chairs/accent-&-lounge-chair-1.png"
+import StorageReceptionImage from "@/public/Images/Office-Solution/STORAGE-&-RECEPTION/Bookshelves-Open-Shelving/Bookshelves-Open-Shelving-1.png"
+import TablesMeatingFurnitureImage from "@/public/Images/Office-Solution/TABLES-&-MEETING-FURNITURE/Collaboration-Discussion-Table/Collaboration-Discussion-Table-1.png"
+
 const SOLUTIONS = [
   {
     title: "WORKSTATION",
     href: "/office-solutions/workstation",
-    image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&q=80",
+    image: WorkStationImage,
   },
   {
     title: "OFFICE CHAIRS",
     href: "/office-solutions/office-chairs",
-    image: "https://images.unsplash.com/photo-1589384267710-7a170981ca78?w=800&q=80",
+    image: OfficeChairImage,
   },
   {
     title: "TABLES & MEETING FURNITURE",
     href: "/office-solutions/tables-meeting-furniture",
-    image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=80",
+    image: TablesMeatingFurnitureImage,
   },
   {
     title: "STORAGE & RECEPTION",
     href: "/office-solutions/storage-reception",
-    image: "https://images.unsplash.com/photo-1600508774634-4e11d34730e2?w=800&q=80",
+    image: StorageReceptionImage,
   },
   {
     title: "SOFT SEATING & OFFICE SOFAS",
     href: "/office-solutions/soft-seating-office-sofas",
-    image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80",
+    image: SoftSeatingReceptionImage,
   },
 ];
 
@@ -54,7 +62,7 @@ export default function OfficeSolutions() {
               className="group relative overflow-hidden aspect-[4/3] block"
             >
               {/* Background image */}
-              <img
+              <Image
                 src={item.image}
                 alt={item.title}
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"

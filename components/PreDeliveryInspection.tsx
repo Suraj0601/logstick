@@ -1,5 +1,7 @@
 "use client";
 
+import PreDeliveryInspectionCoverImage from "@/public/Images/Pre-Delivery-Inspection-Cover-Page.png";
+
 export default function PreDeliveryInspection() {
   return (
     <section className="relative w-full min-h-[420px] flex items-center justify-center overflow-hidden">
@@ -8,7 +10,7 @@ export default function PreDeliveryInspection() {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80')",
+            `url(${PreDeliveryInspectionCoverImage.src})`,
         }}
       />
 

@@ -1,36 +1,45 @@
 "use client";
 
+import Image from "next/image";
+
+import BedImage from "@/public/Images/Home-Solution/Bedroom-Furniture/Beds/bed-2.png";
+import WardrobeImage from "@/public/Images/Home-Solution/Bedroom-Furniture/Wardrobes/wardrobes-2.png";
+import DresserImage from "@/public/Images/Home-Solution/Bedroom-Furniture/Beds/bed-2.png";
+import ShoeRackImage from "@/public/Images/Home-Solution/Bedroom-Furniture/Beds/bed-2.png";
+import SofaImage from "@/public/Images/Home-Solution/Bedroom-Furniture/Beds/bed-2.png";
+
+
 const FURNITURE = [
   {
     title: "BED",
     products: 10,
     href: "/readymade-furniture/bed",
-    image: "https://images.unsplash.com/photo-1588046130717-0eb0c9a3ba15?w=800&q=80",
+    image: BedImage,
   },
   {
     title: "WARDROBE",
     products: 5,
     href: "/readymade-furniture/wardrobe",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
+    image: WardrobeImage,
   },
-  {
-    title: "DRESSER",
-    products: 6,
-    href: "/readymade-furniture/dresser",
-    image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80",
-  },
-  {
-    title: "SHOE RACK",
-    products: 0,
-    href: "/readymade-furniture/shoe-rack",
-    image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=800&q=80",
-  },
-  {
-    title: "SOFA",
-    products: 0,
-    href: "/readymade-furniture/sofa",
-    image: "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=800&q=80",
-  },
+  // {
+  //   title: "DRESSER",
+  //   products: 6,
+  //   href: "/readymade-furniture/dresser",
+  //   image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80",
+  // },
+  // {
+  //   title: "SHOE RACK",
+  //   products: 0,
+  //   href: "/readymade-furniture/shoe-rack",
+  //   image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=800&q=80",
+  // },
+  // {
+  //   title: "SOFA",
+  //   products: 0,
+  //   href: "/readymade-furniture/sofa",
+  //   image: "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=800&q=80",
+  // },
 ];
 
 export default function ReadymadeFurniture() {
@@ -68,14 +77,14 @@ export default function ReadymadeFurniture() {
   );
 }
 
-function FurnitureCard({ item }: { item: { title: string; products: number; href: string; image: string } }) {
+function FurnitureCard({ item }: { item: { title: string; products: number; href: string; image: any } }) {
   return (
     <a
       href={item.href}
       className="group relative overflow-hidden aspect-[3/4] block rounded-sm"
     >
       {/* Background image */}
-      <img
+      <Image
         src={item.image}
         alt={item.title}
         className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
