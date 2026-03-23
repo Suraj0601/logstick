@@ -1,5 +1,9 @@
 "use client";
 
+import Image from "next/image";
+
+import HeroSectionCoverImage from "@/public/Images/Cover-Page.png";
+
 export default function HeroSection() {
   return (
     <section className="relative w-full min-h-[480px] flex items-center justify-center overflow-hidden">
@@ -8,7 +12,7 @@ export default function HeroSection() {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1600&q=80')",
+            `url(${HeroSectionCoverImage.src})`,
         }}
       />
 
